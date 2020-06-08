@@ -1,6 +1,6 @@
-Question link:
-GFG:-https://practice.geeksforgeeks.org/problems/find-duplicates-in-an-array/1
-O(n)space and Time Solution
+#Question link:
+#GFG:-https://practice.geeksforgeeks.org/problems/find-duplicates-in-an-array/1
+#O(n)space and Time Solution
 
 def duplicates(arr, n): 
 	d=[0]*n
