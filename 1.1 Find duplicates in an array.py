@@ -1,6 +1,17 @@
 #Question link:
 #GFG:-https://practice.geeksforgeeks.org/problems/find-duplicates-in-an-array/1
+#o(n) and O(1) space
+l=len(a)
+for i in range(l):
+	a[a[i]%l]+=l
+for i in range(l):
+	if a[i]>=(l**2):
+		print(a[i])
+
+		
+		
 #O(n)space and Time Solution
+
 
 def duplicates(arr, n): 
 	d=[0]*n
