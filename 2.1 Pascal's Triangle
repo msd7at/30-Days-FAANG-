@@ -1,0 +1,30 @@
+#USING FORMULA C=int(C(i-j)/j)
+link:-https://leetcode.com/problems/pascals-triangle/
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        m=[]
+        for i in range(1,numRows+1):
+            c=1
+            t=[]
+            for j in range(1,i+1):
+                t.append(c)
+                c=int(c*(i-j)/j)
+            m.append(t)
+        return m
+#Simple Method
+
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        m=[]
+        for i in range(numRows):
+            if i==0:
+                m.append([1])
+            else:
+                t=[]
+                for j in range(i+1):
+                    if j==0 or j==i:
+                        t.append(1)
+                    else:
+                        t.append(m[i-1][j-1]+m[i-1][j])
+                m.append(t)
+        return m
