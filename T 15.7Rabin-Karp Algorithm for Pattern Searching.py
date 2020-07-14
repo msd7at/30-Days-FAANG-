@@ -1,4 +1,5 @@
 #link:- https://leetcode.com/problems/implement-strstr/
+#    https://leetcode.com/problems/implement-strstr/discuss/734919/Python-3-using-Rabin-Karp-Algorithm-for-Pattern-Searching
 class Solution:
     def strStr(self, text: str, pat: str) -> int:
         if text==pat or pat=="":
