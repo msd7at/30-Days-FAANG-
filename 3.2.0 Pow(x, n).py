@@ -1,4 +1,5 @@
 # link : https://leetcode.com/problems/powx-n/
+#time complexity : logn
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         def www(x,n):
