@@ -7,8 +7,24 @@ for i in range(l):
 for i in range(l):
 	if a[i]>=(l**2):
 		print(a[i])
-
-		
+#sol 2
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        # using hashmap
+        # by sorting and then find
+        t=h=nums[0]
+        
+        while True:
+            t=nums[t]
+            h=nums[nums[h]]
+            if t==h:
+                break
+        t=nums[0]
+        while t!=h:
+            t=nums[t]
+            h=nums[h]
+        return h
+    
 		
 #O(n)space and Time Solution
 
