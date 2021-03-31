@@ -17,3 +17,23 @@ for q in range(t):
             x=abs(l[i])
     f=abs(s-x)
     print(x,su-f)
+    
+    # approach 2
+    class Solution:
+        
+    # @param A : tuple of integers
+    # @return a list of integers
+    def repeatedNumber(self, A):
+        l=len(A)
+        newArray=[0]*(l+1)
+        for i in A:
+            newArray[i]+=1
+        ans=[0,0]
+        for i in range(1,l+1):
+            if newArray[i] == 0 :
+                ans[1]=i
+            elif newArray[i]>1:
+                ans[0]=i
+        return ans
+            
+        
